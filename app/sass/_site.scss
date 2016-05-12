@@ -44,8 +44,28 @@ body {
   }
 
   .site__footer-mail {
+    display: inline-block;
+    position: relative;
     font-size: 15px;
     color: #8c8c8c;
+    transition: color .3s ease-in-out;
+
+    &:after {
+      display: block;
+      @include absoluteCenterX();
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background: #d40000;
+      content: '';
+      transition: width .3s ease-in-out;
+    }
+
+    &:hover {
+      color: #d40000;
+
+      &:after { width: 100%; }
+    }
   }
 }
 @media (min-width: $phone-landscape) {
@@ -58,14 +78,21 @@ body {
 
     .site__footer {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
+      align-content: center;
       position: absolute;
       right: 0;
       bottom: 0;
       left: 0;
       height: 137px;
       text-align: left;
+    }
+
+    .site__footer-item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
 
     .site__footer-copyright { padding: 0; }
