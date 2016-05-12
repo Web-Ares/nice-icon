@@ -1,0 +1,39 @@
+.logo {
+
+}
+
+.logo_footer {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  perspective: 800px;
+
+  &:after {
+    display: block;
+    @include absoluteCenterY();
+    right: 77px;
+    width: 12px;
+    height: 15px;
+    background: url("../img/logo-point.png") no-repeat center;
+    background-size: contain;
+    content: '';
+//    animation: rotating 2s infinite;
+    transform-origin: 50% 50% -100px;
+    transform-style: preserve-3d;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+@-webkit-keyframes rotating {
+  0%   { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+@keyframes rotating {
+  0%   { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
