@@ -1,11 +1,11 @@
 .social {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
+//  display: flex;
+//  justify-content: space-between;
+  margin-bottom: 10px;
   cursor: default;
 
   .social__item {
-    display: block;
+    display: inline-block;
     width: 33px;
     height: 33px;
     margin-left: 5px;

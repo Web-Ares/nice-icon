@@ -5,35 +5,40 @@
 .logo_footer {
   display: inline-block;
   position: relative;
-  margin-bottom: 5px;
-  perspective: 800px;
+  margin-bottom: 10px;
 
-  &:after {
-    display: block;
+  span {
     @include absoluteCenterY();
     right: 77px;
     width: 12px;
     height: 15px;
-    background: url("../img/logo-point.png") no-repeat center;
-    background-size: contain;
-    content: '';
-//    animation: rotating 2s infinite;
-    transform-origin: 50% 50% -100px;
-    transform-style: preserve-3d;
+    perspective: 800px;
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/logo-point.png") no-repeat center;
+      background-size: contain;
+      content: '';
+      animation: rotating 5s infinite;
+      transform-style: preserve-3d;
+    }
   }
 
-  img {
-    display: block;
-  }
+  img { display: block; }
 }
 
 @-webkit-keyframes rotating {
-  0%   { transform: scale(0); }
-  50% { transform: scale(1); }
-  100% { transform: scale(0); }
+  0%   { transform: rotateY(0deg); }
+  50% { transform: rotateY(720deg); }
+  100% { transform: rotateY(0deg); }
 }
 @keyframes rotating {
-  0%   { transform: scale(0); }
-  50% { transform: scale(1); }
-  100% { transform: scale(0); }
+  0%   { transform: rotateY(0deg); }
+  50% { transform: rotateY(720deg); }
+  100% { transform: rotateY(0deg); }
 }
