@@ -1,6 +1,42 @@
 //fonts
-@mixin main-font1() {
-  font-family: "myriadpro-regular", sans-serif;
+@mixin font-reg() {
+  font-family: "brandon_reg", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-reg-it() {
+  font-family: "brandon_reg_it", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-thin() {
+  font-family: "brandon_thin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-bld() {
+  font-family: "brandon_bld", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-blk() {
+  font-family: "brandon_blk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-light() {
+  font-family: "brandon_light", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-med() {
+  font-family: "brandon_med", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
