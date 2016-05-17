@@ -1,0 +1,140 @@
+.themes-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .themes-list__item {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #434040;
+
+    &:visited { color: #434040; }
+
+    &:hover {
+
+      .themes-list__pic {
+
+        &:before {
+          width: 100%;
+          transition-delay: 0s;
+        }
+
+        &:after {
+          left: 50%;
+          transition-delay: .2s;
+        }
+      }
+    }
+  }
+
+  .themes-list__title {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #434040;
+  }
+  .themes-list__pic {
+    display: block;
+    position: relative;
+    padding-bottom: 56%;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgba(0,0,0,.5);
+      transition: width .3s ease-in-out .2s;
+      content: '';
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -50%;
+      width: 100px;
+      height: 100px;
+      margin: -50px 0 0 -50px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      transition: left .3s ease-in-out;
+      content: '';
+    }
+  }
+
+  .themes-list__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .themes-list__col {
+    display: block;
+    position: relative;
+    font-size: 24px;
+    padding: 0 10px 0 50px;
+
+    &:before {
+      display: block;
+      @include absoluteCenterY();
+      left: 0;
+      width: 43px;
+      height: 22px;
+      background: url("../img/vector.png") no-repeat center;
+      background-size: contain;
+      content: '';
+    }
+  }
+
+  .themes-list__price {
+    font-size: 30px;
+    color: #d40000;
+  }
+}
+
+@media (min-width: $phone-landscape) {
+  .themes-list {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .themes-list {
+    margin-left: -30px;
+
+    .themes-list__item {
+      width: 50%;
+      padding-left: 30px;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .themes-list {
+    margin-left: -40px;
+
+    .themes-list__item {
+      width: 33.33333%;
+      padding-left: 40px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .themes-list {
+    margin-left: -60px;
+
+    .themes-list__item {
+      padding-left: 60px;
+      margin-bottom: 40px;
+    }
+  }
+}

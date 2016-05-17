@@ -2,17 +2,13 @@ body {
   @include font-reg();
 }
 .site {
-  @include justify;
   overflow: hidden;
   position: relative;
   z-index: 1;
   min-width: 320px;
   min-height: 100%;
   background: #f1f1f1;
-
-  &:after {
-    height: 137px;
-  }
+  color: #434040;
 
   .site__header {
     position: relative;
@@ -73,6 +69,8 @@ body {
 }
 @media (min-width: $tablet-portrait) {
   .site {
+    @include justify;
+    &:after { height: 137px; }
 
     .site__footer {
       display: flex;
