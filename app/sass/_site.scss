@@ -1,6 +1,7 @@
 body {
   @include font-reg();
 }
+
 .site {
   overflow: hidden;
   position: relative;
@@ -14,6 +15,10 @@ body {
     position: relative;
     height: 100px;
     z-index: 3;
+  }
+
+  .site__header-layout{
+
   }
 
   .site__content {
@@ -62,12 +67,15 @@ body {
     }
   }
 }
+
 @media (min-width: $phone-landscape) {
   .site {
 
   }
 }
+
 @media (min-width: $tablet-portrait) {
+
   .site {
     @include justify;
     &:after { height: 137px; }
@@ -93,12 +101,15 @@ body {
 
     .site__footer-copyright { padding: 0; }
   }
+
 }
+
 @media (min-width: $tablet-landscape) {
   .site {
 
   }
 }
+
 @media (min-width: $desktop) {
   .site {
 
