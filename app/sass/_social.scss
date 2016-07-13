@@ -20,6 +20,10 @@
       transition: fill .3s ease-in-out;
     }
 
-    &:hover svg { fill: #d40000; }
+    &:hover svg {
+      fill: #d40000;
+    }
+
   }
+
 }

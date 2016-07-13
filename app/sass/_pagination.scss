@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  margin-bottom: 20px;
 
   .pagination__item {
     display: block;
@@ -149,7 +150,7 @@
 }
 @media (min-width: $desktop) {
   .pagination {
-
+    margin-bottom: 40px;
   }
 }
 
