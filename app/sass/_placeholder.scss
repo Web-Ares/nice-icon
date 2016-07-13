@@ -1,0 +1,18 @@
+::-webkit-input-placeholder {
+  color: #535353;
+  -webkit-transition: color 300ms ease-in-out;
+}
+:-moz-placeholder {
+  color: #535353;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+.placeholder {
+  color: #535353;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}

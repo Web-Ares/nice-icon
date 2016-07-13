@@ -8,24 +8,13 @@
     width: 100%;
     margin-bottom: 20px;
     color: #434040;
+  }
+
+  .themes-list__link{
+    color: #434040;
 
     &:visited { color: #434040; }
 
-    &:hover {
-
-      .themes-list__pic {
-
-        &:before {
-          width: 100%;
-          transition-delay: 0s;
-        }
-
-        &:after {
-          left: 50%;
-          transition-delay: .2s;
-        }
-      }
-    }
   }
 
   .themes-list__title {
@@ -34,43 +23,17 @@
     font-size: 36px;
     color: #434040;
   }
+
   .themes-list__pic {
     display: block;
     overflow: hidden;
     position: relative;
     padding-bottom: 56%;
-    border: 1px solid #dddddd;
+    border: 1px solid #ddd;
     background-color: #fff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-
-    &:before {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: rgba(0,0,0,.5);
-      transition: width .3s ease-in-out .2s;
-      content: '';
-    }
-
-    &:after {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: -50%;
-      width: 100px;
-      height: 100px;
-      margin: -50px 0 0 -50px;
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
-      transform: rotate(45deg);
-      transition: left .3s ease-in-out;
-      content: '';
-    }
   }
 
   .themes-list__info {
@@ -137,5 +100,57 @@
       padding-left: 60px;
       margin-bottom: 40px;
     }
+
+    .themes-list__link{
+
+      &:hover {
+
+        .themes-list__pic {
+
+          &:before {
+            width: 100%;
+            transition-delay: 0s;
+          }
+
+          &:after {
+            left: 50%;
+            transition-delay: .2s;
+          }
+        }
+      }
+
+    }
+
+    .themes-list__pic {
+
+      &:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        transition: width .3s ease-in-out .2s;
+        content: '';
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: -50%;
+        width: 100px;
+        height: 100px;
+        margin: -50px 0 0 -75px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(45deg);
+        transition: left .3s ease-in-out;
+        content: '';
+      }
+
+    }
+
   }
 }

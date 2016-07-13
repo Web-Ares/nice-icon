@@ -8,17 +8,19 @@ body {
   z-index: 1;
   min-width: 320px;
   min-height: 100%;
-  background: #f1f1f1;
+  background-color: #f1f1f1;
   color: #434040;
 
   .site__header {
     position: relative;
-    height: 100px;
+    height: 508px;
+    background: url( '../img/bg-header.jpg' ) no-repeat top left;
+    background-size: cover;
     z-index: 3;
   }
 
   .site__header-layout{
-
+    height: inherit;
   }
 
   .site__content {
@@ -112,6 +114,10 @@ body {
 
 @media (min-width: $desktop) {
   .site {
+
+    .site__header {
+      height: 2160px;
+    }
 
     .site__content {
       padding: 0 60px;
