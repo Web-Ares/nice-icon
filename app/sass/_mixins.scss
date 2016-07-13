@@ -41,6 +41,18 @@
   font-style: normal;
 }
 
+@mixin font-comforta-reg() {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-comforta-bold() {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
 @mixin justify() {
   text-align: justify;
 
