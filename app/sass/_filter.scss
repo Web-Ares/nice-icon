@@ -1,0 +1,44 @@
+.filter {
+
+  .filter__title {
+    position: relative;
+    padding-right: 25px;
+    text-align: right;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 15px;
+        height: 20px;
+        background: url("../img/select2.svg") no-repeat;
+      background-size: contain;
+        content:'';
+    }
+  }
+
+  .filter__wrap {
+    display: none;
+
+  }
+
+  .filter__row {
+
+    .nice-checkbox {}
+
+  }
+
+  .filter__item {}
+
+  .filter__wrap {}
+
+  .filter__wrap {}
+
+  .filter__wrap {}
+
+}
