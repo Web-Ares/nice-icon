@@ -51,18 +51,120 @@
   .filter__wrap {
     display: none;
     position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+
+    &.active {
+      opacity: 1;
+    }
+
+  }
+
+  .filter__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -166px 0 0 -115px;
+    border: 1px solid #999899;
+    width: 230px;
+    background: #fff;
+  }
+
+  .filter__inner-wrapper {
+    height: 332px;
+    overflow-y: auto;
+    padding: 12px 0 30px;
+  }
+
+  .filter__close {
+    position: absolute;
+    top: -14px;
+    right: -13px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #b8b8b8;
+    border-radius: 50%;
+    background: #fff;
+
+    &:before {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 13px;
+      height: 13px;
+      background: url("../img/filter__close.png") no-repeat;
+      background-size: contain;
+      content: '';
+    }
+
+  }
+
+  .filter__caption {
+    font-size: 14px;
+    color: #908f8f;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+    @include font-comforta-light();
+  }
+
+  .filter__item {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    color: #434040;
+    @include font-comforta-bold();
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &_filter {
+      padding-right: 25px;
+
+      &:before {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        width: 20px;
+        height: 18px;
+        background: url("../img/select2.svg") no-repeat;
+        background-size: contain;
+        content: '';
+      }
+      
+      &:after {
+        position: absolute;
+        top: 0;
+        left: -40px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #3faae0;
+        content: '';
+      }
+      
+    }
+
   }
 
   .filter__row {
+    padding: 0 38px 0 64px;
+    margin-bottom: 39px;
 
-    .nice-checkbox {}
+    &:last-child {
+      margin-bottom: 0;
+    }
 
   }
-
-  .filter__item {}
-
-  .filter__wrap {}
-
-  .filter__wrap {}
 
 }

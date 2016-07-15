@@ -20,6 +20,7 @@
     -ms-user-select: none;
     user-select: none;
     margin-right: 22px;
+    @include font-comforta-bold();
 
     &:before,
     &:after {
@@ -27,7 +28,7 @@
       position: absolute;
       width: 7px;
       height: 7px;
-      top: 1px;
+      top: 3px;
       right: -22px;
     }
     &:before {
@@ -39,7 +40,7 @@
       background-size: cover;
       opacity: 0;
       transition: opacity 150ms ease-in-out;
-      top: 3px;
+      top: 5px;
       right: -20px;
     }
 
