@@ -17,7 +17,7 @@
             _popupPadding = 40,
             _btnShow =  $( '.popup__open' ),
             _obj = obj,
-            _btnClose = _obj.find( '.popup__close, .popup__cancel' ),
+            _btnClose = _obj.find( '.popup__close, .popup__cancel, .close' ),
             _wrap = _obj.find( '.popup__wrap' ),
             _contents = _obj.find( '.popup__content' ),
             _scrollConteiner = $( 'html' ),

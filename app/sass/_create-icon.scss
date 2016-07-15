@@ -1,0 +1,81 @@
+.create-icon {
+  position: relative;
+  width: 270px;
+  margin: 0 auto;
+
+  .create-icon__wrapper {
+    background: #fff;
+    border: 1px solid #999899;
+    padding: 43px 15px 25px 25px;
+    @include font-comforta-reg();
+    max-height: 265px;
+    overflow-y: auto;
+  }
+
+  .create-icon__title {
+    position: relative;
+    padding-left: 58px;
+    margin-bottom: 23px;
+    color: #454545;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:before {
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 34px;
+      height: 40px;
+      background: url("../img/create-icon.svg") no-repeat;
+      background-size: contain;
+      content: '';
+    }
+
+  }
+
+  p {
+    line-height: 1.4;
+    color: #908f8f;
+    font-size: 14px;
+    margin-bottom: 15px;
+
+  }
+
+  .create-icon__list li {
+    position: relative;
+    padding-left: 37px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #454545;
+    font-weight: 400;
+
+    a {
+      color: inherit;
+      border-bottom: 1px solid transparent;
+      -webkit-transition: border-bottom 0.3s ease;
+      transition: border-bottom 0.3s ease;
+
+      &:hover {
+        border-bottom: 1px solid #454545;
+      }
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: 1px;
+      left: -1px;
+      width: 13px;
+      height: 14px;
+      background: url("../img/plus.svg") no-repeat;
+      background-size: contain;
+      content: '';
+    }
+
+  }
+
+}

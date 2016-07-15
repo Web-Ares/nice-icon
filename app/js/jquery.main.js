@@ -7,7 +7,7 @@
             _obj = obj,
             _inner = _obj.find( '.filter__inner'),
             _btn = _obj.find( '.filter__title-inner'),
-            _closeBtn = _obj.find( '.filter__close'),
+            _closeBtn = _obj.find( '.close'),
             _html = $( 'html' ),
             _wrap = _obj.find( '.filter__wrap' );
 
@@ -89,9 +89,47 @@
         _init();
 
     };
+
+    var MyIcons = function ( obj ) {
+
+        var _self = this,
+            _obj = obj,
+            _btnUpload = _obj.find( '.my-icons__upload' );
+
+        var _addEvents = function () {
+
+                _btnUpload.on( {
+
+                    click: function() {
+
+                        var dataIcon = $( this ).parents( '.my-icons__item' ).data( 'icon' );
+
+                        return false;
+                    }
+
+                } );
+
+            },
+            _createPopup = function() {
+
+
+
+            },
+            _init = function () {
+                _addEvents();
+                _obj[0].obj = _self;
+            };
+
+        _init();
+
+    };
     
     $.each( $( '.filter' ), function(){
         new Filter ( $( this ) )
+    } );
+
+    $.each( $( '.my-icons' ), function(){
+        new MyIcons ( $( this ) )
     } );
 
 } )();

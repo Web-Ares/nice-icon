@@ -1,0 +1,40 @@
+.close {
+  position: absolute;
+  top: -14px;
+  right: -13px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #b8b8b8;
+  border-radius: 50%;
+  background: #fff;
+
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 13px;
+    height: 13px;
+    background: url("../img/filter__close.png") no-repeat;
+    background-size: contain;
+    content: '';
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .close {
+
+    &:before {
+      -webkit-transition: transform 0.3s ease;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover:before {
+      -ms-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+  }
+
+}
