@@ -75,3 +75,124 @@
   }
 
 }
+
+@media (min-width: $tablet-portrait) {
+
+  .my-icons {
+
+    .my-icons__item {}
+
+    .my-icons__name {}
+
+    .my-icons__pic {}
+
+    .my-icons__footer {}
+
+    .my-icons__upload {
+
+      &:before {}
+
+      &:hover:before {}
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 25%;
+      margin-bottom: 34px;
+    }
+
+    .my-icons__name {
+      font-size: 13px;
+      color: #434040;
+    }
+
+    .my-icons__pic {
+      margin-bottom: 5px;
+    }
+
+    .my-icons__footer {}
+
+    .my-icons__upload {
+      top: -2px;
+      width: 15px;
+      height: 15px;
+
+      &:before {}
+
+      &:hover:before {}
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 20%;
+    }
+
+    .my-icons__name {}
+
+    .my-icons__pic {}
+
+    .my-icons__footer {}
+
+    .my-icons__upload {
+
+      &:before {}
+
+      &:hover:before {}
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop_l) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 16.6%;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop_xl) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 14.27%;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop_xxl) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 12.5%;
+    }
+
+  }
+
+}

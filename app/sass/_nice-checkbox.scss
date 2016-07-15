@@ -19,7 +19,6 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin-right: 22px;
     @include font-comforta-bold();
 
     &:before,
@@ -29,7 +28,7 @@
       width: 7px;
       height: 7px;
       top: 3px;
-      right: -22px;
+      left: -38px;
     }
     &:before {
       border: 2px solid #9c9c9c;
@@ -41,7 +40,83 @@
       opacity: 0;
       transition: opacity 150ms ease-in-out;
       top: 5px;
-      right: -20px;
+      left: -36px;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .nice-checkbox {
+
+    input {
+
+      &:checked + label:after {}
+
+    }
+    label {
+      font-size: 15px;
+      margin-right: 20px;
+      color: #8f8e8f;
+
+      &:before,
+      &:after {
+        left: auto;
+        right: -15px;
+        top: 2px;
+      }
+      &:before {}
+      &:after {
+        right: -13px;
+        top: 4px;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .nice-checkbox {
+
+    input {
+
+      &:checked + label:after {}
+
+    }
+    label {
+
+      &:before,
+      &:after {}
+      &:before {}
+      &:after {}
+
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .nice-checkbox {
+
+    input {
+
+      &:checked + label:after {}
+
+    }
+    label {
+
+      &:before,
+      &:after {}
+      &:before {}
+      &:after {}
+
     }
 
   }

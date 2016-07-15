@@ -22,6 +22,7 @@
     background: #ffffff;
     border: 1px solid #dddddd;
     width: 100%;
+    //width: 79.4%;
     padding: 19px;
   }
   .dashboard__user {
@@ -127,5 +128,193 @@
 
   }
   .dashboard__inner {}
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .dashboard {
+    padding: 15px;
+
+    &:after {}
+
+    .dashboard__header {
+      display: block;
+      width: 30%;
+    }
+    .dashboard__content {
+      padding: 0;
+      width: 68%;
+    }
+    .dashboard__user {}
+    .dashboard__user-avatar {
+
+      img {}
+
+    }
+    .dashboard__user-mail {}
+    .dashboard__menu {
+
+      a {
+
+        &:after {}
+
+        &:nth-child(2) {
+
+          &:after {}
+
+        }
+        &:nth-child(3) {
+
+          &:after {}
+
+        }
+        &:nth-child(4) {
+
+          &:after {}
+
+        }
+
+        &:hover,
+        &.active {}
+      }
+
+    }
+    .dashboard__settings {
+
+      label {}
+
+      input[type='text'],
+      input[type='password'],
+      input[type='email']{}
+
+    }
+    .dashboard__inner {}
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .dashboard {
+    padding: 30px;
+
+    &:after {}
+
+    .dashboard__header {
+      width: 25%;
+    }
+    .dashboard__content {
+      width: 73%;
+    }
+    .dashboard__user {}
+    .dashboard__user-avatar {
+
+      img {}
+
+    }
+    .dashboard__user-mail {}
+    .dashboard__menu {
+
+      a {
+
+        &:after {}
+
+        &:nth-child(2) {
+
+          &:after {}
+
+        }
+        &:nth-child(3) {
+
+          &:after {}
+
+        }
+        &:nth-child(4) {
+
+          &:after {}
+
+        }
+
+        &:hover,
+        &.active {}
+      }
+
+    }
+    .dashboard__settings {
+
+      label {}
+
+      input[type='text'],
+      input[type='password'],
+      input[type='email']{}
+
+    }
+    .dashboard__inner {}
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .dashboard {
+    padding: 60px;
+
+    &:after {}
+
+    .dashboard__header {
+      width: 312px;
+    }
+    .dashboard__content {
+      width: calc(100% - 372px);
+    }
+    .dashboard__user {}
+    .dashboard__user-avatar {
+
+      img {}
+
+    }
+    .dashboard__user-mail {}
+    .dashboard__menu {
+
+      a {
+
+        &:after {}
+
+        &:nth-child(2) {
+
+          &:after {}
+
+        }
+        &:nth-child(3) {
+
+          &:after {}
+
+        }
+        &:nth-child(4) {
+
+          &:after {}
+
+        }
+
+        &:hover,
+        &.active {}
+      }
+
+    }
+    .dashboard__settings {
+
+      label {}
+
+      input[type='text'],
+      input[type='password'],
+      input[type='email']{}
+
+    }
+    .dashboard__inner {}
+
+  }
 
 }

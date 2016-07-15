@@ -52,6 +52,29 @@
 @media (min-width: $tablet-portrait) {
   .search-icon {
 
+    &_2 {
+      margin-bottom: 32px;
+
+      input {
+        height: 60px;
+        letter-spacing: 1px;
+        border: 2px solid #f1f1f1;
+        border-right: none;
+        border-left: none;
+        font-size: 20px;
+        -webkit-transition: border 0.3s ease, color 0.3s ease;
+        transition: border 0.3s ease, color 0.3s ease;
+        text-align: center;
+
+        &:focus {
+          border-color: #f1f1f1;
+          color: #000;
+        }
+
+      }
+
+    }
+
   }
 }
 @media (min-width: $tablet-landscape) {

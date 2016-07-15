@@ -128,7 +128,8 @@
     -ms-user-select: none;
     user-select: none;
 
-    &_filter {
+    &.active-bottom,
+    &.active-top {
       padding-right: 25px;
 
       &:before {
@@ -155,6 +156,15 @@
       
     }
 
+    &.active-bottom {
+
+      &:before {
+        background: url("../img/select1.svg") no-repeat;
+        background-size: contain;
+      }
+
+    }
+
   }
 
   .filter__row {
@@ -163,6 +173,243 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .filter {
+    margin-bottom: 0;
+
+    .filter__title {
+      display: none;
+    }
+
+    .filter__title-inner {
+
+      &:hover {}
+
+      &:hover:after {}
+
+      &:after,
+      &:before {}
+
+      &:after {}
+
+    }
+
+    .filter__wrap {
+      display: block;
+      position: static;
+      z-index: 1;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      background: none;
+      text-align: center;
+
+    }
+
+    .filter__inner {
+      position: static;
+      top: auto;
+      left: auto;
+      margin: 0;
+      border: none;
+      width: auto;
+      background: none;
+    }
+
+    .filter__inner-wrapper {
+      height: auto;
+      padding: 33px 0 0;
+      overflow-y: visible;
+    }
+
+    .filter__close {
+      display: none;
+    }
+
+    .filter__caption {
+      display: none;
+    }
+
+    .filter__item {
+      padding-bottom: 5px;
+      margin-right: 20px;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-bottom 0.3s ease;
+      transition: border-bottom 0.3s ease;
+      color: #8f8e8f;
+
+      &.active-bottom,
+      &.active-top {
+        padding-right: 0;
+        border-bottom: 2px solid #3aa9e0;
+
+        &:before,
+        &:after {
+          left: auto;
+          right: -14px;
+          width: auto;
+          height: auto;
+          border-radius: 0;
+          background: none;
+          border: 5px solid transparent;
+        }
+
+        &:before {
+          top: -1px;
+          border-bottom: 5px solid #8f8e8f;
+        }
+        &:after {
+          top: 11px;
+          border-top: 5px solid #3ca9e0;
+        }
+
+      }
+
+      &.active-bottom {
+
+        &:before {
+          border-bottom-color: #3ca9e0;
+        }
+        &:after {
+          border-top-color: #8f8e8f;
+        }
+
+      }
+
+    }
+
+    .filter__row {
+      display: inline-block;
+      padding: 0;
+      margin: 0 5px 0 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .filter {
+
+    .filter__title {}
+
+    .filter__title-inner {
+
+      &:hover {}
+
+      &:hover:after {}
+
+      &:after,
+      &:before {}
+
+      &:after {}
+
+    }
+
+    .filter__wrap {
+
+      &.active {}
+
+    }
+
+    .filter__inner {}
+
+    .filter__inner-wrapper {}
+
+    .filter__close {
+
+      &:before {}
+
+    }
+
+    .filter__caption {}
+
+    .filter__item {
+
+      &_filter {
+
+        &:before {}
+
+        &:after {}
+
+      }
+
+    }
+
+    .filter__row {
+      margin-right: 10px;
+    }
+
+  }
+
+}
+
+@media (min-width: $desktop) {
+
+  .filter {
+
+    .filter__title {}
+
+    .filter__title-inner {
+
+      &:hover {}
+
+      &:hover:after {}
+
+      &:after,
+      &:before {}
+
+      &:after {}
+
+    }
+
+    .filter__wrap {
+
+      &.active {}
+
+    }
+
+    .filter__inner {}
+
+    .filter__inner-wrapper {}
+
+    .filter__close {
+
+      &:before {}
+
+    }
+
+    .filter__caption {}
+
+    .filter__item {
+
+      &_filter {
+
+        &:before {}
+
+        &:after {}
+
+      }
+
+    }
+
+    .filter__row {
+      margin-right: 22px;
     }
 
   }
