@@ -24,6 +24,12 @@ var paths = {
             ]
         },
         {
+            dist: 'dashboard.min.js',
+            contains: [
+                'app/js/jquery.main.js'
+            ]
+        },
+        {
             dist: 'ui.min.js',
             contains: [
                 'app/js/jquery.popup.js',
