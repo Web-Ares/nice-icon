@@ -5,20 +5,61 @@
 
         var _self = this,
             _obj = obj,
+            _inner = _obj.find( '.filter__inner'),
             _btn = _obj.find( '.filter__title-inner'),
+            _closeBtn = _obj.find( '.filter__close'),
+            _html = $( 'html' ),
             _wrap = _obj.find( '.filter__wrap' );
 
         var _addEvents = function () {
 
-                _btn.on( {
+                _obj.on( {
 
                     click: function() {
+
+                        _hideWrap();
+
+                    }
+
+                } );
+
+                _inner.on( {
+
+                    click: function( event ) {
+
+                        event.stopPropagation();
+
+                    }
+
+                } );
+
+                _btn.on( {
+
+                    click: function( event ) {
+
+                        _html.css( {
+                            'overflow-y': 'hidden'
+                        } );
 
                         _wrap.css( {
                             display: 'block'
                         } );
 
-                        _wrap.addClass( 'active' );
+                        setTimeout( function() {
+                            _wrap.addClass( 'active' );
+                        },1 );
+
+                        event.stopPropagation();
+
+                    }
+
+                } );
+
+                _closeBtn.on( {
+
+                    click: function() {
+
+                        _hideWrap();
 
                     }
 
@@ -26,6 +67,18 @@
 
             },
             _hideWrap = function() {
+
+                _wrap.removeClass( 'active' );
+
+                setTimeout( function() {
+
+                    _wrap.attr( 'style', '' );
+
+                },300 );
+
+                _html.css( {
+                    'overflow-y': 'auto'
+                } );
 
             },
             _init = function () {

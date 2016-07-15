@@ -41,6 +41,12 @@
   font-style: normal;
 }
 
+@mixin font-comforta-light() {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
 @mixin font-comforta-reg() {
   font-family: 'Comfortaa', cursive;
   font-weight: 400;
