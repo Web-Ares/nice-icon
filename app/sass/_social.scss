@@ -27,3 +27,32 @@
   }
 
 }
+.social-networks {
+  @include flexbox();
+  @include flex-wrap( wrap );
+  @include flex-direction();
+  @include align-items( center );
+  @include justify-content( space-between );
+  margin: 0 -8px 8px;
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 29px;
+    height: 29px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+
+    svg {
+      fill: #464343;
+      position: relative;
+      left: 50%;
+      height: 29px;
+      transform: translateX(-50%);
+    }
+  }
+  .social-networks__facebook {
+    width: 9px;
+  }
+}
