@@ -11,6 +11,10 @@
             new Filter ( $( this ) )
         } );
 
+        $.each( $( '.my-icons' ), function(){
+            new MyIcons ( $( this ) )
+        } );
+
     } );
 
 
@@ -225,13 +229,5 @@
         _init();
 
     };
-    
-    $.each( $( '.filter' ), function(){
-        new Filter ( $( this ) )
-    } );
-
-    $.each( $( '.my-icons' ), function(){
-        new MyIcons ( $( this ) )
-    } );
 
 } )();
