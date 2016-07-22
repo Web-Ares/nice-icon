@@ -1,10 +1,11 @@
+var popup;
 ( function(){
 
     $( function(){
 
         $( '.popup' ).each(function(){
 
-            new Popup($(this));
+            popup = new Popup($(this));
 
         });
 
@@ -47,6 +48,21 @@
                 return scrollBarWidth;
             },
             _hide = function(){
+
+                var popupContent = _obj.find( '.popup__content' );
+
+                $.each( popupContent, function() {
+
+                    var curContent = $( this );
+
+                    if ( curContent.attr( 'data-icon' ) ){
+
+                        curContent.removeAttr( 'data-icon' );
+
+                    }
+
+                } );
+
                 _obj.css( {
                     overflowY: 'hidden'
                 } );
@@ -80,7 +96,11 @@
                 } );
                 _btnShow.on( {
                     click: function(){
-                        _show( $( this ).attr( 'data-popup' ) );
+
+                        var curLink = $( this );
+
+                        _show( curLink.attr( 'data-popup' ), curLink );
+
                         return false;
                     }
                 } );
@@ -102,8 +122,13 @@
                     }
                 } );
             },
-            _show = function( className ){
-                _setPopupContent( className );
+            _addDataIcon = function( data, curContent ) {
+
+                curContent.attr( 'data-icon', data );
+
+            },
+            _show = function( className, curLink ){
+                _setPopupContent( className, curLink );
 
                 _scrollConteiner.css( {
                     overflowY: 'hidden',
@@ -113,11 +138,17 @@
                 _centerWrap();
 
             },
-            _setPopupContent = function( className ){
+            _setPopupContent = function( className, curLink ){
+
                 var curContent = _contents.filter( '.popup__' + className );
 
                 _contents.css( { display: 'none' } );
                 curContent.css( { display: 'block' } );
+
+                if ( curLink.attr( 'data-icon' ) ){
+                    _addDataIcon( curLink.data( 'icon' ), curContent );
+                }
+
             };
 
         //public properties

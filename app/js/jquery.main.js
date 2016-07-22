@@ -11,12 +11,7 @@
             new Filter ( $( this ) )
         } );
 
-        $.each( $( '.my-icons' ), function(){
-            new MyIcons ( $( this ) )
-        } );
-
     } );
-
 
     var DashboardMenu = function (obj) {
 
@@ -185,40 +180,6 @@
                 _html.css( {
                     'overflow-y': 'auto'
                 } );
-
-            },
-            _init = function () {
-                _addEvents();
-                _obj[0].obj = _self;
-            };
-
-        _init();
-
-    };
-
-    var MyIcons = function ( obj ) {
-
-        var _self = this,
-            _obj = obj,
-            _btnUpload = _obj.find( '.my-icons__upload' );
-
-        var _addEvents = function () {
-
-                _btnUpload.on( {
-
-                    click: function() {
-
-                        var dataIcon = $( this ).parents( '.my-icons__item' ).data( 'icon' );
-
-                        return false;
-                    }
-
-                } );
-
-            },
-            _createPopup = function() {
-
-
 
             },
             _init = function () {

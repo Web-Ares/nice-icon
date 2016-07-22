@@ -258,10 +258,6 @@
       display: block;
       width: 30%;
     }
-    .dashboard__content {
-      padding: 0;
-      width: 68%;
-    }
     .dashboard__user {}
     .dashboard__user-avatar {
 
@@ -314,7 +310,7 @@
 @media (min-width: $tablet-landscape) {
 
   .dashboard {
-    padding: 60px;
+    padding: 30px;
 
     .dashboard__header {
       display: block;
@@ -393,6 +389,7 @@
       display: none;
     }
     .dashboard__content {
+      padding: 0;
       width: 79.4%;
     }
     .dashboard__settings {
@@ -429,6 +426,7 @@
 @media (min-width: $desktop) {
 
   .dashboard {
+    padding: 60px;
 
     .dashboard__links {
       padding: 0 24px;

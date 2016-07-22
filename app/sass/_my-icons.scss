@@ -76,11 +76,26 @@
 
 }
 
+@media (min-width: $phone-landscape) {
+
+  .my-icons {
+
+    .my-icons__item {
+      width: 25%;
+      margin-bottom: 34px;
+    }
+
+  }
+
+}
+
 @media (min-width: $tablet-portrait) {
 
   .my-icons {
 
-    .my-icons__item {}
+    .my-icons__item {
+      width: 20%;
+    }
 
     .my-icons__name {}
 
@@ -104,10 +119,7 @@
 
   .my-icons {
 
-    .my-icons__item {
-      width: 25%;
-      margin-bottom: 34px;
-    }
+    .my-icons__item {}
 
     .my-icons__name {
       font-size: 13px;
@@ -139,9 +151,7 @@
 
   .my-icons {
 
-    .my-icons__item {
-      width: 20%;
-    }
+    .my-icons__item {}
 
     .my-icons__name {}
 
