@@ -154,6 +154,54 @@
 
   }
 
+  .filter__sort {
+    display: block;
+    position: relative;
+    padding-right: 25px;
+    font-weight: 700;
+  }
+
+  input[value='toTop'] ~ .filter__sort,
+  input[value='toBottom'] ~ .filter__sort {
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #3faae0;
+      content: '';
+    }
+
+  }
+
+  input[value='toBottom'] ~ .filter__sort,
+  input[value='toTop'] ~ .filter__sort {
+
+    &:before {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      width: 20px;
+      height: 18px;
+      background: url("../img/select2.svg") no-repeat;
+      background-size: contain;
+      content: '';
+    }
+
+  }
+
+  input[value='toBottom'] ~ .filter__sort {
+
+    &:before {
+      background: url("../img/select1.svg") no-repeat;
+      background-size: contain;
+    }
+
+  }
+
 }
 
 @media (min-width: $tablet-portrait) {
@@ -218,50 +266,45 @@
     }
 
     .filter__item {
-      padding-bottom: 5px;
-      margin-right: 20px;
-      border-bottom: 2px solid transparent;
-      -webkit-transition: border-bottom 0.3s ease;
-      transition: border-bottom 0.3s ease;
-      color: #8f8e8f;
 
-      &.active-bottom,
-      &.active-top {
-        padding-right: 0;
-        border-bottom: 2px solid #3aa9e0;
 
-        &:before,
-        &:after {
-          left: auto;
-          right: -14px;
-          width: auto;
-          height: auto;
-          border-radius: 0;
-          background: none;
-          border: 5px solid transparent;
-        }
-
-        &:before {
-          top: -1px;
-          border-bottom: 5px solid #8f8e8f;
-        }
-        &:after {
-          top: 11px;
-          border-top: 5px solid #3ca9e0;
-        }
-
-      }
-
-      &.active-bottom {
-
-        &:before {
-          border-bottom-color: #3ca9e0;
-        }
-        &:after {
-          border-top-color: #8f8e8f;
-        }
-
-      }
+      //&.active-bottom,
+      //&.active-top {
+      //  padding-right: 0;
+      //  border-bottom: 2px solid #3aa9e0;
+      //
+      //  &:before,
+      //  &:after {
+      //    left: auto;
+      //    right: -14px;
+      //    width: auto;
+      //    height: auto;
+      //    border-radius: 0;
+      //    background: none;
+      //    border: 5px solid transparent;
+      //  }
+      //
+      //  &:before {
+      //    top: -1px;
+      //    border-bottom: 5px solid #8f8e8f;
+      //  }
+      //  &:after {
+      //    top: 11px;
+      //    border-top: 5px solid #3ca9e0;
+      //  }
+      //
+      //}
+      //
+      //&.active-bottom {
+      //
+      //  &:before {
+      //    border-bottom-color: #3ca9e0;
+      //  }
+      //  &:after {
+      //    border-top-color: #8f8e8f;
+      //  }
+      //
+      //}
 
     }
 
@@ -273,6 +316,60 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    .filter__sort {
+      padding-bottom: 5px;
+      padding-right: 0;
+      margin-right: 20px;
+      border-bottom: 2px solid transparent;
+      -webkit-transition: border-bottom 0.3s ease;
+      transition: border-bottom 0.3s ease;
+      color: #8f8e8f;
+    }
+
+    input[value='toTop'] ~ .filter__sort,
+    input[value='toBottom'] ~ .filter__sort {
+      padding-right: 0;
+      border-bottom: 2px solid #3aa9e0;
+
+      &:before,
+      &:after {
+        left: auto;
+        right: -14px;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        background: none;
+        border: 5px solid transparent;
+      }
+
+      &:before {
+        top: -1px;
+        border-bottom: 5px solid #8f8e8f;
+      }
+      &:after {
+        top: 11px;
+        border-top: 5px solid #3ca9e0;
+      }
+
+    }
+
+    input[value='toTop'] ~ .filter__sort {
+
+      &:before {}
+
+    }
+
+    input[value='toBottom'] ~ .filter__sort {
+
+      &:before {
+        border-bottom-color: #3ca9e0;
+      }
+      &:after {
+        border-top-color: #8f8e8f;
+      }
+
     }
 
   }
@@ -332,6 +429,27 @@
       margin-right: 10px;
     }
 
+    .filter__sort {}
+
+    input[value='toTop'] ~ .filter__sort,
+    input[value='toBottom'] ~ .filter__sort {
+
+      &:after {}
+
+    }
+
+    input[value='toTop'] ~ .filter__sort {
+
+      &:before {}
+
+    }
+
+    input[value='toBottom'] ~ .filter__sort {
+
+      &:before { }
+
+    }
+
   }
 
 }
@@ -387,6 +505,27 @@
 
     .filter__row {
       margin-right: 22px;
+    }
+
+    .filter__sort {}
+
+    input[value='toTop'] ~ .filter__sort,
+    input[value='toBottom'] ~ .filter__sort {
+
+      &:after {}
+
+    }
+
+    input[value='toTop'] ~ .filter__sort {
+
+      &:before {}
+
+    }
+
+    input[value='toBottom'] ~ .filter__sort {
+
+      &:before { }
+
     }
 
   }

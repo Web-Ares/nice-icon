@@ -87,8 +87,17 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
+                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
+                            <!--<span class="filter__item active-top">Popularity</span>-->
+                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
+
                             <!-- filter__item -->
-                            <span class="filter__item active-top">Popularity</span>
+                            <span class="filter__item">
+
+                                <input type="hidden" id="popularity" value="toTop">
+                                <label for="popularity" class="filter__sort">Popularity</label>
+
+                            </span>
                             <!-- /filter__item -->
 
                         </div>
@@ -97,9 +106,12 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <!-- filter__item -->
-                            <span class="filter__item">Last</span>
-                            <!-- /filter__item -->
+                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
+                            <!--<span class="filter__item">Last</span>-->
+                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
+
+                            <input type="hidden" id="last" value="">
+                            <label for="last" class="filter__sort">Last</label>
 
                         </div>
                         <!-- /filter__row -->
@@ -107,9 +119,12 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <!-- filter__item -->
-                            <span class="filter__item active-bottom">Name</span>
-                            <!-- /filter__item -->
+                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
+                            <!--<span class="filter__item active-bottom">Name</span>-->
+                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
+
+                            <input type="hidden" id="name" value="toBottom">
+                            <label for="name" class="filter__sort">Name</label>
 
                         </div>
                         <!-- /filter__row -->
@@ -210,7 +225,7 @@
                             <!-- /my-icons__date -->
 
                             <!-- my-icons__upload -->
-                            <a href="#" class="my-icons__upload popup__open" data-popup="upload" ></a>
+                            <a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="1"></a>
                             <!-- /my-icons__upload -->
 
                         </span>
