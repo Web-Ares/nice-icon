@@ -78,7 +78,6 @@
 
                     <!-- filter__inner-wrapper -->
                     <div class="filter__inner-wrapper">
-                        <!-- you can add next classes for 'filter__item': 'active-top' & 'active-bottom' -->
 
                         <!-- filter__caption -->
                         <div class="filter__caption">please make your choice</div>
@@ -87,18 +86,8 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
-                            <!--<span class="filter__item active-top">Popularity</span>-->
-                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
-
-                            <!-- filter__item -->
-                            <span class="filter__item">
-
-                                <input type="hidden" id="popularity" value="toTop">
-                                <label for="popularity" class="filter__sort">Popularity</label>
-
-                            </span>
-                            <!-- /filter__item -->
+                            <input type="hidden" class="filter__hidden" id="popularity" value="toTop">
+                            <label for="popularity" class="filter__sort">Popularity</label>
 
                         </div>
                         <!-- /filter__row -->
@@ -106,11 +95,7 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
-                            <!--<span class="filter__item">Last</span>-->
-                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
-
-                            <input type="hidden" id="last" value="">
+                            <input type="hidden" class="filter__hidden" id="last" value="">
                             <label for="last" class="filter__sort">Last</label>
 
                         </div>
@@ -119,11 +104,7 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <!--&lt;!&ndash; filter__item &ndash;&gt;-->
-                            <!--<span class="filter__item active-bottom">Name</span>-->
-                            <!--&lt;!&ndash; /filter__item &ndash;&gt;-->
-
-                            <input type="hidden" id="name" value="toBottom">
+                            <input type="hidden" class="filter__hidden" id="name" value="toBottom">
                             <label for="name" class="filter__sort">Name</label>
 
                         </div>

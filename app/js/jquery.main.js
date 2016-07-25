@@ -109,6 +109,8 @@
             _inner = _obj.find( '.filter__inner'),
             _btn = _obj.find( '.filter__title-inner'),
             _closeBtn = _obj.find( '.close'),
+            _filterSort = _obj.find( '.filter__sort'),
+            _inputs = _obj.find( '.filter__hidden'),
             _html = $( 'html' ),
             _wrap = _obj.find( '.filter__wrap' );
 
@@ -161,6 +163,31 @@
                     click: function() {
 
                         _hideWrap();
+
+                    }
+
+                } );
+
+                _filterSort.on( {
+
+                    click: function() {
+
+                        var curLabel = $( this ),
+                            curInput = curLabel.closest( '.filter__row' ).find( '.filter__hidden' );
+
+                        _inputs.val( '' );
+
+                        if ( curInput.val() == 'toTop' ){
+                            console.log(1);
+
+                            curInput.val( 'toBottom' );
+
+                        } else {
+                            console.log(2);
+
+                            curInput.val( 'toTop' );
+
+                        }
 
                     }
 

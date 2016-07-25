@@ -93,57 +93,6 @@
     @include font-comforta-light();
   }
 
-  .filter__item {
-    display: block;
-    position: relative;
-    font-size: 16px;
-    color: #434040;
-    @include font-comforta-bold();
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-    &.active-bottom,
-    &.active-top {
-      padding-right: 25px;
-
-      &:before {
-        position: absolute;
-        top: -1px;
-        right: 0;
-        width: 20px;
-        height: 18px;
-        background: url("../img/select2.svg") no-repeat;
-        background-size: contain;
-        content: '';
-      }
-      
-      &:after {
-        position: absolute;
-        top: 0;
-        left: -40px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: #3faae0;
-        content: '';
-      }
-      
-    }
-
-    &.active-bottom {
-
-      &:before {
-        background: url("../img/select1.svg") no-repeat;
-        background-size: contain;
-      }
-
-    }
-
-  }
-
   .filter__row {
     padding: 0 38px 0 64px;
     margin-bottom: 39px;
@@ -159,6 +108,14 @@
     position: relative;
     padding-right: 25px;
     font-weight: 700;
+    font-size: 16px;
+    color: #434040;
+    @include font-comforta-bold();
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   input[value='toTop'] ~ .filter__sort,
