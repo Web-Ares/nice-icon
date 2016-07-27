@@ -115,6 +115,7 @@
             _html = $( 'html' ),
             _wrap = _obj.find( '.filter__wrap'),
             _path = _obj.attr( 'action' ),
+            _checkbox = _obj.find( 'input[type="checkbox"]' ),
             _request = new XMLHttpRequest();
 
         var _addEvents = function () {
@@ -183,14 +184,13 @@
                             _inputs.val( '' );
                             curInput.val( 'toBottom' );
 
-                            _ajaxRequest();
+                            _changeContent();
 
                         } else {
 
                             _inputs.val( '' );
                             curInput.val( 'toTop' );
-
-                            _ajaxRequest();
+                            _changeContent();
 
                         }
 
@@ -198,18 +198,48 @@
 
                 } );
 
+                _checkbox.on( {
+
+                    change: function() {
+                        _changeContent();
+                    }
+
+                } );
+
+            },
+            _changeContent = function() {
+
+                var item = _content.find( '.my-icons__item' );
+                item.addClass( 'my-icons__item_close' );
+
+                setTimeout( function() {
+
+                    _content.html( '' );
+                    _ajaxRequest();
+
+                },399 ) ;
+
             },
             _addFilterContent = function( msg ) {
 
-                var hasItems = msg.has_items;
-
                 $.each( msg.items, function() {
 
+                    var timeHTML = this.datetime.split( '-'),
+                        newTimeHTML = [];
+
+                    timeHTML[0] = timeHTML[0].split('');
+                    timeHTML[0].splice(0,2);
+                    timeHTML[0] = timeHTML[0].join('');
+                    newTimeHTML[0] = timeHTML[2];
+                    newTimeHTML[1] = timeHTML[1];
+                    newTimeHTML[2] = timeHTML[0];
+                    newTimeHTML = newTimeHTML.join('.');
+
                     var newBlock = $( '<div class="my-icons__item hidden">'+
-                                            '<div class="my-icons__name">+ this.name +</div>'+
+                                            '<div class="my-icons__name">'+ this.name +'</div>'+
                                             '<span class="my-icons__pic" style="background-image: url('+ this.url + ')"></span>'+
                                             '<div class="my-icons__footer">' +
-                                                '<time class="my-icons__date" datetime="'+ this.datetime +'">+ this.timeHTML +</time>'+
+                                                '<time class="my-icons__date" datetime="'+ this.datetime +'">'+ newTimeHTML +'</time>'+
                                                 '<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="'+ this.dataIcon +'"></a>'+
                                             '</div>'+
                                     '</div>' );
@@ -221,49 +251,38 @@
                 var newItems = _content.find( '.hidden' );
 
                 setTimeout( function() {
-                    _heightAnimation( hasItems, newItems );
+
+                    newItems.each( function( i ) {
+                        _showNewItems( $( this ), i );
+                    } );
+
                 }, 50 );
-
-            },
-            _heightAnimation = function( hasItems, newItems ) {
-
-                newItems.each( function( i ) {
-                    _showNewItems( $( this ), i );
-                } );
 
             },
             _showNewItems = function( item, index ){
 
                 setTimeout( function() {
                     item.removeClass( 'hidden' );
-                }, index * 100 );
+                }, index * 50 );
 
             },
             _ajaxRequest = function(){
 
-                var newsItem = _content.find( '.my-icons__item' );
-
-                console.log(newsItem.length);
                 _request.abort();
                 _request = $.ajax( {
                     url: _path,
                     data: _obj.serialize(),
-                    //data: {
-                    //    loadedCount: newsItem.length
-                    //},
-                    dataType: 'html',
+                    dataType: 'json',
                     timeout: 20000,
                     type: 'GET',
                     success: function ( msg ) {
-
-                        console.log('success');
-
-                        //_addFilterContent( msg );
-
+                        console.log(_obj.serialize());
+                        console.log(msg);
+                        _addFilterContent( msg );
                     },
                     error: function ( XMLHttpRequest ) {
                         if( XMLHttpRequest.statusText != 'abort' ) {
-                            alert( 'Error!' );
+                            console.error( 'Error!' );
                         }
                     }
                 });
@@ -285,6 +304,7 @@
 
             },
             _init = function () {
+                _ajaxRequest();
                 _addEvents();
                 _obj[0].obj = _self;
             };
