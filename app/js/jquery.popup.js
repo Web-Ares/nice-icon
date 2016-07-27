@@ -94,16 +94,17 @@ var popup;
                         _centerWrap();
                     }
                 } );
-                _btnShow.on( {
-                    click: function(){
 
-                        var curLink = $( this );
+                $( 'body' ).on( 'click', '.popup__open', function() {
 
-                        _show( curLink.attr( 'data-popup' ), curLink );
+                    var curLink = $( this );
 
-                        return false;
-                    }
+                    _show( curLink.attr( 'data-popup' ), curLink );
+
+                    return false;
+
                 } );
+
                 _wrap.on( {
                     click: function( e ){
                         e.stopPropagation();
