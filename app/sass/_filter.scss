@@ -118,6 +118,11 @@
     user-select: none;
   }
 
+  &__content {
+    position: relative;
+    padding-bottom: 60px;
+  }
+
   input[value='toTop'] ~ .filter__sort,
   input[value='toBottom'] ~ .filter__sort {
 

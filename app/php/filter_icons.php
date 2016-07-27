@@ -1,7 +1,7 @@
 <?php
 
 $json_data = '{
-        "has_items": 1,
+        "col": 1,
         "items": [
             {
                 "dataIcon": "20",

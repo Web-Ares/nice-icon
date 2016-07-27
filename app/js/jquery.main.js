@@ -106,17 +106,21 @@
 
         var _self = this,
             _obj = obj,
-            _inner = _obj.find( '.filter__inner'),
-            _content = $( '.filter__content'),
-            _btn = _obj.find( '.filter__title-inner'),
-            _closeBtn = _obj.find( '.close'),
-            _filterSort = _obj.find( '.filter__sort'),
-            _inputs = _obj.find( '.filter__hidden'),
+            _inner = _obj.find( '.filter__inner' ),
+            _content = $( '.filter__content' ),
+            _btn = _obj.find( '.filter__title-inner' ),
+            _closeBtn = _obj.find( '.close' ),
+            _filterSort = _obj.find( '.filter__sort' ),
+            _inputs = _obj.find( '.filter__hidden' ),
             _html = $( 'html' ),
-            _wrap = _obj.find( '.filter__wrap'),
+            _wrap = _obj.find( '.filter__wrap' ),
             _path = _obj.attr( 'action' ),
             _checkbox = _obj.find( 'input[type="checkbox"]' ),
-            _request = new XMLHttpRequest();
+            _window = $( window ),
+            _canAddProjects = true,
+            _loader = _content.find( '.preloader' ),
+            _request = new XMLHttpRequest(),
+            currentPage = 1;
 
         var _addEvents = function () {
 
@@ -206,15 +210,33 @@
 
                 } );
 
+                _window.on({
+
+                    'scroll': function(){
+
+                        var scrollTop = _window.scrollTop();
+
+                        if ( (scrollTop + _window.height() ) > (_content.offset().top + _content.height()) ) {
+
+                            if ( _canAddProjects ) {
+                                _canAddProjects = false;
+                                _loader.addClass( 'active' );
+                                _ajaxRequest();
+                            }
+                        }
+                    }
+
+                });
+
             },
             _changeContent = function() {
 
                 var item = _content.find( '.my-icons__item' );
                 item.addClass( 'my-icons__item_close' );
-
+                currentPage = 0;
                 setTimeout( function() {
 
-                    _content.html( '' );
+                    item.remove();
                     _ajaxRequest();
 
                 },399 ) ;
@@ -271,14 +293,26 @@
                 _request.abort();
                 _request = $.ajax( {
                     url: _path,
-                    data: _obj.serialize(),
+                    data: {
+                        action : "get_posts",
+                        filterData: $( '.filter' ).serialize(),
+                        currentPage: currentPage
+                    },
                     dataType: 'json',
                     timeout: 20000,
                     type: 'GET',
                     success: function ( msg ) {
-                        console.log(_obj.serialize());
-                        console.log(msg);
+
                         _addFilterContent( msg );
+                        _loader.removeClass('active');
+
+                        if ( msg.col > 0 ) {
+                            currentPage++;
+                            _canAddProjects = true;
+                        } else {
+                            _canAddProjects = false;
+                        }
+
                     },
                     error: function ( XMLHttpRequest ) {
                         if( XMLHttpRequest.statusText != 'abort' ) {
