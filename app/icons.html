@@ -54,7 +54,7 @@
     <div class="dashboard__content">
 
         <!-- filter -->
-        <form action="#" class="filter">
+        <form action="php/filter_icons.php" class="filter">
 
             <!-- filter__title -->
             <div class="filter__title">
@@ -86,7 +86,7 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <input type="hidden" class="filter__hidden" id="popularity" value="toTop">
+                            <input type="hidden" class="filter__hidden" id="popularity" name="pop" value="toTop">
                             <label for="popularity" class="filter__sort">Popularity</label>
 
                         </div>
@@ -95,7 +95,7 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <input type="hidden" class="filter__hidden" id="last" value="">
+                            <input type="hidden" class="filter__hidden" id="last" name="last" value="">
                             <label for="last" class="filter__sort">Last</label>
 
                         </div>
@@ -104,7 +104,7 @@
                         <!-- filter__row -->
                         <div class="filter__row">
 
-                            <input type="hidden" class="filter__hidden" id="name" value="toBottom">
+                            <input type="hidden" class="filter__hidden" id="name" name="name" value="">
                             <label for="name" class="filter__sort">Name</label>
 
                         </div>
@@ -115,7 +115,7 @@
 
                             <!-- nice-radio -->
                             <div class="nice-checkbox">
-                                <input type="checkbox" id="ch1" name="checkbox" >
+                                <input type="checkbox" id="ch1" name="line" >
                                 <label for="ch1">Line</label>
                             </div>
                             <!-- /nice-radio -->
@@ -128,7 +128,7 @@
 
                             <!-- nice-radio -->
                             <div class="nice-checkbox">
-                                <input type="checkbox" id="ch2" name="checkbox" >
+                                <input type="checkbox" id="ch2" name="solid" >
                                 <label for="ch2">Solid</label>
                             </div>
                             <!-- /nice-radio -->
@@ -141,7 +141,7 @@
 
                             <!-- nice-radio -->
                             <div class="nice-checkbox">
-                                <input type="checkbox" id="ch3" name="checkbox" >
+                                <input type="checkbox" id="ch3" name="color" >
                                 <label for="ch3">Color</label>
                             </div>
                             <!-- /nice-radio -->
@@ -154,7 +154,7 @@
 
                             <!-- nice-radio -->
                             <div class="nice-checkbox">
-                                <input type="checkbox" id="ch4" name="checkbox" >
+                                <input type="checkbox" id="ch4" name="free" >
                                 <label for="ch4">Free</label>
                             </div>
                             <!-- /nice-radio -->
@@ -185,7 +185,7 @@
         <div class="dashboard__inner">
 
             <!-- my-icons -->
-            <div class="my-icons">
+            <div class="my-icons filter__content">
 
                 <!-- my-icons__item -->
                 <div class="my-icons__item">

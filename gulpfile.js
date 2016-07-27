@@ -48,7 +48,7 @@ var paths = {
     watchScripts: 'app/js/**/*.js',
     images: 'app/img/**/*',
     pictures: 'app/pic/**/*',
-    php: 'app/php/**/*',
+    php: 'app/php/**/*.php',
     fonts: 'app/fonts/**/*'
 };
 
@@ -89,7 +89,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('php', function () {
-    return gulp.src(paths.fonts, {
+    return gulp.src(paths.php, {
         base: 'app/php'
     }).pipe(gulp.dest('dist/php'));
 });
@@ -130,6 +130,7 @@ gulp.task('pictures', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.watchScripts,   ['scripts', browserSync.reload]);
+    gulp.watch(paths.php,    ['php',  browserSync.reload]);
     gulp.watch(paths.images,    ['images',  browserSync.reload]);
     gulp.watch(paths.pictures,    ['pictures',  browserSync.reload]);
     gulp.watch(paths.fonts,    ['fonts']);

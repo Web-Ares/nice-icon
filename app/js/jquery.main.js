@@ -107,12 +107,15 @@
         var _self = this,
             _obj = obj,
             _inner = _obj.find( '.filter__inner'),
+            _content = $( '.filter__content'),
             _btn = _obj.find( '.filter__title-inner'),
             _closeBtn = _obj.find( '.close'),
             _filterSort = _obj.find( '.filter__sort'),
             _inputs = _obj.find( '.filter__hidden'),
             _html = $( 'html' ),
-            _wrap = _obj.find( '.filter__wrap' );
+            _wrap = _obj.find( '.filter__wrap'),
+            _path = _obj.attr( 'action' ),
+            _request = new XMLHttpRequest();
 
         var _addEvents = function () {
 
@@ -175,23 +178,95 @@
                         var curLabel = $( this ),
                             curInput = curLabel.closest( '.filter__row' ).find( '.filter__hidden' );
 
-                        _inputs.val( '' );
-
                         if ( curInput.val() == 'toTop' ){
-                            console.log(1);
 
+                            _inputs.val( '' );
                             curInput.val( 'toBottom' );
 
-                        } else {
-                            console.log(2);
+                            _ajaxRequest();
 
+                        } else {
+
+                            _inputs.val( '' );
                             curInput.val( 'toTop' );
+
+                            _ajaxRequest();
 
                         }
 
                     }
 
                 } );
+
+            },
+            _addFilterContent = function( msg ) {
+
+                var hasItems = msg.has_items;
+
+                $.each( msg.items, function() {
+
+                    var newBlock = $( '<div class="my-icons__item hidden">'+
+                                            '<div class="my-icons__name">+ this.name +</div>'+
+                                            '<span class="my-icons__pic" style="background-image: url('+ this.url + ')"></span>'+
+                                            '<div class="my-icons__footer">' +
+                                                '<time class="my-icons__date" datetime="'+ this.datetime +'">+ this.timeHTML +</time>'+
+                                                '<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="'+ this.dataIcon +'"></a>'+
+                                            '</div>'+
+                                    '</div>' );
+
+                    _content.append( newBlock );
+
+                } );
+
+                var newItems = _content.find( '.hidden' );
+
+                setTimeout( function() {
+                    _heightAnimation( hasItems, newItems );
+                }, 50 );
+
+            },
+            _heightAnimation = function( hasItems, newItems ) {
+
+                newItems.each( function( i ) {
+                    _showNewItems( $( this ), i );
+                } );
+
+            },
+            _showNewItems = function( item, index ){
+
+                setTimeout( function() {
+                    item.removeClass( 'hidden' );
+                }, index * 100 );
+
+            },
+            _ajaxRequest = function(){
+
+                var newsItem = _content.find( '.my-icons__item' );
+
+                console.log(newsItem.length);
+                _request.abort();
+                _request = $.ajax( {
+                    url: _path,
+                    data: _obj.serialize(),
+                    //data: {
+                    //    loadedCount: newsItem.length
+                    //},
+                    dataType: 'html',
+                    timeout: 20000,
+                    type: 'GET',
+                    success: function ( msg ) {
+
+                        console.log('success');
+
+                        //_addFilterContent( msg );
+
+                    },
+                    error: function ( XMLHttpRequest ) {
+                        if( XMLHttpRequest.statusText != 'abort' ) {
+                            alert( 'Error!' );
+                        }
+                    }
+                });
 
             },
             _hideWrap = function() {
