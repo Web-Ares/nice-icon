@@ -11,6 +11,7 @@
 
     <link rel="icon" type="image/png" href="img/favicon.png" />
 
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
@@ -52,143 +53,144 @@
 
     <!-- dashboard__content -->
     <div class="dashboard__content">
+        <div class="dashboard__content-scroll perfect-scroll">
 
-        <!-- filter -->
-        <form action="php/filter_icons.php" class="filter">
+            <!-- filter -->
+            <form action="php/filter_icons.php" class="filter">
 
-            <!-- filter__title -->
-            <div class="filter__title">
+                <!-- filter__title -->
+                <div class="filter__title">
 
-                <!-- filter__title-inner -->
-                <span class="filter__title-inner">Filter</span>
-                <!-- /filter__title-inner -->
-
-            </div>
-            <!-- /filter__title -->
-
-            <!-- filter__wrap -->
-            <div class="filter__wrap">
-
-                <!-- filter__inner -->
-                <div class="filter__inner">
-
-                    <!-- close -->
-                    <a href="#" class="close"></a>
-                    <!-- /close -->
-
-                    <!-- filter__inner-wrapper -->
-                    <div class="filter__inner-wrapper">
-
-                        <!-- filter__caption -->
-                        <div class="filter__caption">please make your choice</div>
-                        <!-- /filter__caption -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <input type="hidden" class="filter__hidden" id="popularity" name="pop" value="toTop">
-                            <label for="popularity" class="filter__sort">Popularity</label>
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <input type="hidden" class="filter__hidden" id="last" name="last" value="">
-                            <label for="last" class="filter__sort">Last</label>
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <input type="hidden" class="filter__hidden" id="name" name="name" value="">
-                            <label for="name" class="filter__sort">Name</label>
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <!-- nice-radio -->
-                            <div class="nice-checkbox">
-                                <input type="checkbox" id="ch1" name="line">
-                                <label for="ch1">Line</label>
-                            </div>
-                            <!-- /nice-radio -->
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <!-- nice-radio -->
-                            <div class="nice-checkbox">
-                                <input type="checkbox" id="ch2" name="solid" >
-                                <label for="ch2">Solid</label>
-                            </div>
-                            <!-- /nice-radio -->
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <!-- nice-radio -->
-                            <div class="nice-checkbox">
-                                <input type="checkbox" id="ch3" name="color" >
-                                <label for="ch3">Color</label>
-                            </div>
-                            <!-- /nice-radio -->
-
-                        </div>
-                        <!-- /filter__row -->
-
-                        <!-- filter__row -->
-                        <div class="filter__row">
-
-                            <!-- nice-radio -->
-                            <div class="nice-checkbox">
-                                <input type="checkbox" id="ch4" name="free" >
-                                <label for="ch4">Free</label>
-                            </div>
-                            <!-- /nice-radio -->
-
-                        </div>
-                        <!-- /filter__row -->
-
-                    </div>
-                    <!-- /filter__inner-wrapper -->
+                    <!-- filter__title-inner -->
+                    <span class="filter__title-inner">Filter</span>
+                    <!-- /filter__title-inner -->
 
                 </div>
-                <!-- /filter__inner -->
+                <!-- /filter__title -->
 
-            </div>
-            <!-- /filter__wrap -->
+                <!-- filter__wrap -->
+                <div class="filter__wrap">
 
-        </form>
-        <!-- /filter -->
+                    <!-- filter__inner -->
+                    <div class="filter__inner">
 
-        <!-- search-icon -->
-        <form class="search-icon search-icon_2" action="#">
-            <input type="text" name="search-icon" placeholder="Search for icons">
-            <button type="submit"></button>
-        </form>
-        <!-- /search-icon -->
+                        <!-- close -->
+                        <a href="#" class="close"></a>
+                        <!-- /close -->
 
-        <!-- dashboard__inner -->
-        <div class="dashboard__inner">
+                        <!-- filter__inner-wrapper -->
+                        <div class="filter__inner-wrapper">
 
-            <!-- my-icons -->
-            <div class="my-icons filter__content">
+                            <!-- filter__caption -->
+                            <div class="filter__caption">please make your choice</div>
+                            <!-- /filter__caption -->
 
-                <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
-                <!--<div class="my-icons__item">-->
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <input type="hidden" class="filter__hidden" id="popularity" name="pop" value="toTop">
+                                <label for="popularity" class="filter__sort">Popularity</label>
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <input type="hidden" class="filter__hidden" id="last" name="last" value="">
+                                <label for="last" class="filter__sort">Last</label>
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <input type="hidden" class="filter__hidden" id="name" name="name" value="">
+                                <label for="name" class="filter__sort">Name</label>
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <!-- nice-radio -->
+                                <div class="nice-checkbox">
+                                    <input type="checkbox" id="ch1" name="line">
+                                    <label for="ch1">Line</label>
+                                </div>
+                                <!-- /nice-radio -->
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <!-- nice-radio -->
+                                <div class="nice-checkbox">
+                                    <input type="checkbox" id="ch2" name="solid" >
+                                    <label for="ch2">Solid</label>
+                                </div>
+                                <!-- /nice-radio -->
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <!-- nice-radio -->
+                                <div class="nice-checkbox">
+                                    <input type="checkbox" id="ch3" name="color" >
+                                    <label for="ch3">Color</label>
+                                </div>
+                                <!-- /nice-radio -->
+
+                            </div>
+                            <!-- /filter__row -->
+
+                            <!-- filter__row -->
+                            <div class="filter__row">
+
+                                <!-- nice-radio -->
+                                <div class="nice-checkbox">
+                                    <input type="checkbox" id="ch4" name="free" >
+                                    <label for="ch4">Free</label>
+                                </div>
+                                <!-- /nice-radio -->
+
+                            </div>
+                            <!-- /filter__row -->
+
+                        </div>
+                        <!-- /filter__inner-wrapper -->
+
+                    </div>
+                    <!-- /filter__inner -->
+
+                </div>
+                <!-- /filter__wrap -->
+
+            </form>
+            <!-- /filter -->
+
+            <!-- search-icon -->
+            <form class="search-icon search-icon_2" action="#">
+                <input type="text" name="search-icon" placeholder="Search for icons">
+                <button type="submit"></button>
+            </form>
+            <!-- /search-icon -->
+
+            <!-- dashboard__inner -->
+            <div class="dashboard__inner">
+
+                <!-- my-icons -->
+                <div class="my-icons filter__content">
+
+                    <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
+                    <!--<div class="my-icons__item">-->
 
                     <!--&lt;!&ndash; my-icons__name &ndash;&gt;-->
                     <!--<span class="my-icons__name">App-Window</span>-->
@@ -199,24 +201,24 @@
                     <!--&lt;!&ndash; /my-icons__pic &ndash;&gt;-->
 
                     <!--&lt;!&ndash; my-icons__footer &ndash;&gt;-->
-                        <!--<span class="my-icons__footer">-->
+                    <!--<span class="my-icons__footer">-->
 
-                            <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
-                            <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
-                            <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
+                    <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
+                    <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
 
-                            <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
-                            <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="1"></a>-->
-                            <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
+                    <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="1"></a>-->
+                    <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
 
-                        <!--</span>-->
+                    <!--</span>-->
                     <!--&lt;!&ndash; /my-icons__footer &ndash;&gt;-->
 
-                <!--</div>-->
-                <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
 
-                <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
-                <!--<div class="my-icons__item">-->
+                    <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
+                    <!--<div class="my-icons__item">-->
 
                     <!--&lt;!&ndash; my-icons__name &ndash;&gt;-->
                     <!--<span class="my-icons__name">Camera</span>-->
@@ -227,24 +229,24 @@
                     <!--&lt;!&ndash; /my-icons__pic &ndash;&gt;-->
 
                     <!--&lt;!&ndash; my-icons__footer &ndash;&gt;-->
-                        <!--<span class="my-icons__footer">-->
+                    <!--<span class="my-icons__footer">-->
 
-                            <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
-                            <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
-                            <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
+                    <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
+                    <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
 
-                            <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
-                            <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="2"></a>-->
-                            <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
+                    <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="2"></a>-->
+                    <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
 
-                        <!--</span>-->
+                    <!--</span>-->
                     <!--&lt;!&ndash; /my-icons__footer &ndash;&gt;-->
 
-                <!--</div>-->
-                <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
 
-                <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
-                <!--<div class="my-icons__item">-->
+                    <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
+                    <!--<div class="my-icons__item">-->
 
                     <!--&lt;!&ndash; my-icons__name &ndash;&gt;-->
                     <!--<span class="my-icons__name">Dot-Chart</span>-->
@@ -255,24 +257,24 @@
                     <!--&lt;!&ndash; /my-icons__pic &ndash;&gt;-->
 
                     <!--&lt;!&ndash; my-icons__footer &ndash;&gt;-->
-                        <!--<span class="my-icons__footer">-->
+                    <!--<span class="my-icons__footer">-->
 
-                            <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
-                            <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
-                            <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
+                    <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
+                    <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
 
-                            <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
-                            <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="3"></a>-->
-                            <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
+                    <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="3"></a>-->
+                    <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
 
-                        <!--</span>-->
+                    <!--</span>-->
                     <!--&lt;!&ndash; /my-icons__footer &ndash;&gt;-->
 
-                <!--</div>-->
-                <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
 
-                <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
-                <!--<div class="my-icons__item">-->
+                    <!--&lt;!&ndash; my-icons__item &ndash;&gt;-->
+                    <!--<div class="my-icons__item">-->
 
                     <!--&lt;!&ndash; my-icons__name &ndash;&gt;-->
                     <!--<span class="my-icons__name">Mail</span>-->
@@ -283,34 +285,35 @@
                     <!--&lt;!&ndash; /my-icons__pic &ndash;&gt;-->
 
                     <!--&lt;!&ndash; my-icons__footer &ndash;&gt;-->
-                        <!--<span class="my-icons__footer">-->
+                    <!--<span class="my-icons__footer">-->
 
-                            <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
-                            <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
-                            <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__date &ndash;&gt;-->
+                    <!--<time class="my-icons__date" datetime="2016-04-12">12.04.16</time>-->
+                    <!--&lt;!&ndash; /my-icons__date &ndash;&gt;-->
 
-                            <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
-                            <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="4"></a>-->
-                            <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
+                    <!--&lt;!&ndash; my-icons__upload &ndash;&gt;-->
+                    <!--<a href="#" class="my-icons__upload popup__open" data-popup="upload" data-icon="4"></a>-->
+                    <!--&lt;!&ndash; /my-icons__upload &ndash;&gt;-->
 
-                        <!--</span>-->
+                    <!--</span>-->
                     <!--&lt;!&ndash; /my-icons__footer &ndash;&gt;-->
 
-                <!--</div>-->
-                <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; /my-icons__item &ndash;&gt;-->
 
-                <!-- preloader -->
-                <div class="preloader">
-                    <span></span>
+                    <!-- preloader -->
+                    <div class="preloader">
+                        <span></span>
+                    </div>
+                    <!-- /preloader -->
+
                 </div>
-                <!-- /preloader -->
+                <!-- /my-icons -->
 
             </div>
-            <!-- /my-icons -->
+            <!-- /dashboard__inner -->
 
         </div>
-        <!-- /dashboard__inner -->
-
     </div>
     <!-- /dashboard__content -->
 
@@ -368,6 +371,7 @@
 <!-- /popup -->
 
 <script src="js/vendors/jquery-3.1.0.min.js"></script>
+<script src="js/vendors/perfect-scrollbar.jquery.min.js"></script>
 <script src="js/dashboard.min.js"></script>
 </body>
 </html>
