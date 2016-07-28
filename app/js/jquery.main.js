@@ -127,6 +127,8 @@
             _filterSort = _obj.find( '.filter__sort' ),
             _inputs = _obj.find( '.filter__hidden' ),
             _html = $( 'html' ),
+            _body = $( 'body' ),
+            _scrollWrapper = $( '.dashboard__content-scroll' ),
             _wrap = _obj.find( '.filter__wrap' ),
             _path = _obj.attr( 'action' ),
             _checkbox = _obj.find( 'input[type="checkbox"]' ),
@@ -224,23 +226,24 @@
 
                 } );
 
-                _window.on({
+                _scrollWrapper.on( {
 
-                    'scroll': function(){
+                    scroll: function() {
 
-                        var scrollTop = _window.scrollTop();
+                        var wrapperHeight = _scrollWrapper.height(),
+                            wrapperTop = _scrollWrapper.offset().top;
 
-                        if ( (scrollTop + _window.height() ) > (_content.offset().top + _content.height()) ) {
-
+                        if ( _content.height() + _content.offset().top < wrapperHeight + wrapperTop ){
                             if ( _canAddProjects ) {
                                 _canAddProjects = false;
                                 _loader.addClass( 'active' );
                                 _ajaxRequest();
                             }
                         }
+
                     }
 
-                });
+                } );
 
             },
             _changeContent = function() {
