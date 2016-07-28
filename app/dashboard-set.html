@@ -11,6 +11,7 @@
 
     <link rel="icon" type="image/png" href="img/favicon.png" />
 
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
 
 </head>
@@ -34,6 +35,8 @@
                 <!-- dashboard__user-mail -->
                 <span class="dashboard__user-mail">ivan_manson@gmerinka.spa</span>
                 <!-- /dashboard__user-mail -->
+
+                <a href="#" class="dashboard__header-close"></a>
 
             </div>
             <!-- /dashboard__user -->
@@ -95,71 +98,73 @@
 
         <!-- dashboard__content -->
         <div class="dashboard__content">
+            <div class="dashboard__content-scroll perfect-scroll">
 
-            <!-- dashboard__menu-btn -->
-            <a class="dashboard__menu-btn" href="#">
-                <span></span>
-            </a>
-            <!-- /dashboard__menu-btn -->
+                <!-- dashboard__menu-btn -->
+                <a class="dashboard__menu-btn" href="#">
+                    <span></span>
+                </a>
+                <!-- /dashboard__menu-btn -->
 
-            <!-- dashboard__settings -->
-            <div class="dashboard__settings">
+                <!-- dashboard__settings -->
+                <div class="dashboard__settings">
 
-                <form action="#">
+                    <form action="#">
 
 
-                    <!-- dashboard__settings-fields -->
-                    <div class="dashboard__settings-fields">
+                        <!-- dashboard__settings-fields -->
+                        <div class="dashboard__settings-fields">
 
-                        <!-- dashboard__settings-avatar -->
-                        <div class="dashboard__settings-avatar">
-                            <img src="pic/user-set-avatar.jpg" width="313" height="313" alt="">
+                            <!-- dashboard__settings-avatar -->
+                            <div class="dashboard__settings-avatar">
+                                <img src="pic/user-set-avatar.jpg" width="313" height="313" alt="">
+                            </div>
+                            <!-- /dashboard__settings-avatar -->
+
+                            <!-- dashboard__settings-field -->
+                            <div class="dashboard__settings-field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <!-- /dashboard__settings-field -->
+
+                            <!-- dashboard__settings-field -->
+                            <div class="dashboard__settings-field">
+                                <label for="sunname">Sunname</label>
+                                <input type="text" name="sunname" id="sunname">
+                            </div>
+                            <!-- /dashboard__settings-field -->
+
                         </div>
-                        <!-- /dashboard__settings-avatar -->
+                        <!-- dashboard__settings-fields -->
 
                         <!-- dashboard__settings-field -->
                         <div class="dashboard__settings-field">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name">
+                            <label for="email">E-Mail</label>
+                            <input type="email" name="email" id="email">
                         </div>
                         <!-- /dashboard__settings-field -->
 
                         <!-- dashboard__settings-field -->
                         <div class="dashboard__settings-field">
-                            <label for="sunname">Sunname</label>
-                            <input type="text" name="sunname" id="sunname">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
                         </div>
                         <!-- /dashboard__settings-field -->
 
-                    </div>
-                    <!-- dashboard__settings-fields -->
+                        <!-- dashboard__settings-field -->
+                        <div class="dashboard__settings-field">
+                            <label for="birthday">Birthday</label>
+                            <input type="text" name="birthday" id="birthday">
+                        </div>
+                        <!-- /dashboard__settings-field -->
 
-                    <!-- dashboard__settings-field -->
-                    <div class="dashboard__settings-field">
-                        <label for="email">E-Mail</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <!-- /dashboard__settings-field -->
+                    </form>
 
-                    <!-- dashboard__settings-field -->
-                    <div class="dashboard__settings-field">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <!-- /dashboard__settings-field -->
-
-                    <!-- dashboard__settings-field -->
-                    <div class="dashboard__settings-field">
-                        <label for="birthday">Birthday</label>
-                        <input type="text" name="birthday" id="birthday">
-                    </div>
-                    <!-- /dashboard__settings-field -->
-
-                </form>
+                </div>
+                <!-- /dashboard__settings -->
 
             </div>
-            <!-- /dashboard__settings -->
-
         </div>
         <!-- /dashboard__content -->
 
@@ -186,6 +191,7 @@
 
 
     <script src="js/vendors/jquery-3.1.0.min.js"></script>
+    <script src="js/vendors/perfect-scrollbar.jquery.min.js"></script>
     <script src="js/dashboard.min.js"></script>
 </body>
 </html>

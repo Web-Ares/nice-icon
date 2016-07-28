@@ -6,6 +6,8 @@
   @include justify-content( space-between );
   @include align-items();
   @include font-comforta-reg();
+  height: 100vh;
+  min-height: 600px;
 
   &:after {
     display: none;
@@ -46,6 +48,7 @@
     transition: transform 0.3s ease;
   }
   .dashboard__user {
+    position: relative;
     padding: 5px 10px 9px;
     margin: 0 0 5px;
     width: 219px;
@@ -155,7 +158,7 @@
   .dashboard__settings {
     max-width: 808px;
     margin: 0 auto;
-    padding-top: 24px;
+    padding: 24px 0 0;
 
     .dashboard__settings-field {
       margin: 0 0 20px;
@@ -244,7 +247,25 @@
     }
 
   }
+  .dashboard__header-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #bababa;
+    border-radius: 100%;
+    background: url("../img/filter__close.png") no-repeat center;
+    background-size: 13px;
+  }
 
+}
+.perfect-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: $tablet-portrait) {
@@ -254,10 +275,6 @@
 
     &:after {}
 
-    .dashboard__header {
-      display: block;
-      width: 30%;
-    }
     .dashboard__user {}
     .dashboard__user-avatar {
 
@@ -306,7 +323,6 @@
   }
 
 }
-
 @media (min-width: $tablet-landscape) {
 
   .dashboard {
@@ -394,6 +410,8 @@
     }
     .dashboard__settings {
       position: relative;
+      margin-top: 32px;
+      padding: 24px 20px;
 
       .dashboard__settings-fields {
         width: 50%;
@@ -418,6 +436,12 @@
       position: absolute;
       top: 0;
       right: 63px;
+    }
+    .dashboard__menu-btn {
+      display: none;
+    }
+    .dashboard__header-close {
+      display: none;
     }
 
   }

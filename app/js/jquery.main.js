@@ -11,6 +11,12 @@
             new Filter ( $( this ) )
         } );
 
+        $.each( $( '.perfect-scroll' ), function(){
+
+            $( this ).perfectScrollbar();
+
+        } );
+
     } );
 
     var DashboardMenu = function (obj) {
@@ -20,6 +26,7 @@
             _obj = obj,
             _window = $( window),
             _menuBtn = _obj.find('.dashboard__menu-btn'),
+            _menuBtnClose = _obj.find('.dashboard__header-close'),
             _menuItems = _obj.find('.dashboard__header'),
             _html = $('html'),
             _body = $('body');
@@ -43,9 +50,13 @@
 
                     resize: function () {
 
-                        if( _obj.hasClass( 'opened' ) ) {
+                        if( _window.width() >= 992 ) {
 
-                            _closeMenu();
+                            if( _obj.hasClass( 'opened' ) ) {
+
+                                _closeMenu();
+
+                            }
 
                         }
 
@@ -57,16 +68,19 @@
 
                     click: function () {
 
-                        if( _obj.hasClass( 'opened' ) ) {
+                        _openMenu();
 
-                            _closeMenu();
+                        return false;
 
+                    }
 
-                        } else {
+                } );
 
-                            _openMenu();
+                _menuBtnClose.on( {
 
-                        }
+                    click: function () {
+
+                        _closeMenu();
 
                         return false;
 
