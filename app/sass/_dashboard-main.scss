@@ -43,9 +43,11 @@
     background: #ffffff;
     border: 1px solid #dddddd;
     width: 100%;
-    padding: 20px;
     -webkit-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
+  }
+  .dashboard__content-scroll {
+    padding: 20px;
   }
   .dashboard__user {
     position: relative;
@@ -189,7 +191,6 @@
     }
 
   }
-  .dashboard__inner {}
   .dashboard__settings-avatar {
     overflow: hidden;
     width: 200px;
@@ -319,6 +320,9 @@
 
     }
     .dashboard__inner {}
+    .dashboard__content-scroll {
+      padding: 0;
+    }
 
   }
 
@@ -406,7 +410,6 @@
       display: none;
     }
     .dashboard__content {
-      padding: 0;
       width: 79.4%;
     }
     .dashboard__settings {

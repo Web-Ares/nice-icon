@@ -355,6 +355,7 @@
 
             },
             _init = function () {
+                _loader.addClass( 'active' );
                 _ajaxRequest();
                 _addEvents();
                 _obj[0].obj = _self;
